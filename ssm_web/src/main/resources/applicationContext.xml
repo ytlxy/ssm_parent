@@ -3,18 +3,17 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:tx="http://www.springframework.org/schema/tx"
-       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd
-       http://www.springframework.org/schema/aop
-       http://www.springframework.org/schema/aop/spring-aop.xsd
        http://www.springframework.org/schema/tx
-       http://www.springframework.org/schema/tx/spring-tx.xcd">
+       http://www.springframework.org/schema/tx/spring-tx.xsd">
 <!--    配置注解扫描-->
-    <context:component-scan base-package="com.cn.service"/>
-    <context:component-scan base-package="com.cn.dao"/>
+    <context:component-scan base-package="com.cn.service">
+    </context:component-scan>
+    <context:component-scan base-package="com.cn.dao">
+    </context:component-scan>
     <context:property-placeholder location="classpath:db.properties"/>
 <!--    配置连接池-->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
@@ -25,13 +24,13 @@
     </bean>
 <!--    sqlsessionfactory交予ioc管理-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" value="dataSource"/>
+        <property name="dataSource" ref="dataSource"/>
     </bean>
 <!--    扫描dao接口-->
     <bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.cn.dao"/>
     </bean>
-<!--        配置spring声明式事务管理-->
+<!--    配置spring声明式事务管理-->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>

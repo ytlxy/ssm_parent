@@ -3,29 +3,29 @@ package com.cn.domain;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Product implements Serializable {
+public class product implements Serializable {
     private String id;
     private String productNum;
     private String productName;
     private String cityName;
     private Date departrueTime;
     private String departrueTimeStr;
-    private String productPrice;
-    private Double productDesc;
+    private Double productPrice;
+    private String productDesc;
     private Integer productStatus;
     private String productStatusStr;
 
     @Override
     public String toString() {
-        return "Product{" +
+        return "product{" +
                 "id='" + id + '\'' +
                 ", productNum='" + productNum + '\'' +
                 ", productName='" + productName + '\'' +
                 ", cityName='" + cityName + '\'' +
                 ", departrueTime=" + departrueTime +
                 ", departrueTimeStr='" + departrueTimeStr + '\'' +
-                ", productPrice='" + productPrice + '\'' +
-                ", productDesc=" + productDesc +
+                ", productPrice=" + productPrice +
+                ", productDesc='" + productDesc + '\'' +
                 ", productStatus=" + productStatus +
                 ", productStatusStr='" + productStatusStr + '\'' +
                 '}';
@@ -79,19 +79,19 @@ public class Product implements Serializable {
         this.departrueTimeStr = departrueTimeStr;
     }
 
-    public String getProductPrice() {
+    public Double getProductPrice() {
         return productPrice;
     }
 
-    public void setProductPrice(String productPrice) {
+    public void setProductPrice(Double productPrice) {
         this.productPrice = productPrice;
     }
 
-    public Double getProductDesc() {
+    public String getProductDesc() {
         return productDesc;
     }
 
-    public void setProductDesc(Double productDesc) {
+    public void setProductDesc(String productDesc) {
         this.productDesc = productDesc;
     }
 

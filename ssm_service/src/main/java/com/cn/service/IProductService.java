@@ -1,9 +1,9 @@
 package com.cn.service;
 
-import com.cn.domain.Product;
+import com.cn.domain.product;
 
 import java.util.List;
 
 public interface IProductService {
-    public List<Product> findAll() throws Exception;
+    public List<product> findAll() throws Exception;
 }

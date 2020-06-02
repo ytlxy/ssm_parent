@@ -11,5 +11,19 @@
 
     <artifactId>ssm_domain</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.webproject</groupId>
+            <artifactId>ssm_utils</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webproject</groupId>
+            <artifactId>ssm_utils</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
 
 </project>

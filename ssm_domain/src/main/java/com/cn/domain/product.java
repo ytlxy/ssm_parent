@@ -1,5 +1,8 @@
 package com.cn.domain;
 
+import com.cn.utils.DateUtils;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -8,6 +11,7 @@ public class product implements Serializable {
     private String productNum;
     private String productName;
     private String cityName;
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     private Date departrueTime;
     private String departrueTimeStr;
     private Double productPrice;
@@ -72,6 +76,9 @@ public class product implements Serializable {
     }
 
     public String getDepartrueTimeStr() {
+        if(departrueTime!=null){
+            setDepartrueTimeStr(DateUtils.date2string(departrueTime,"yyyy-MM-dd HH:mm:ss"));
+        }
         return departrueTimeStr;
     }
 
@@ -104,8 +111,16 @@ public class product implements Serializable {
     }
 
     public String getProductStatusStr() {
+        if(getProductStatus()!=null){
+            if (getProductStatus()==0){
+                productStatusStr="关闭";
+            }
+            if(getProductStatus()==1){
+                productStatusStr="开启";
+            }
+        }
         return productStatusStr;
-    }
+        }
 
     public void setProductStatusStr(String productStatusStr) {
         this.productStatusStr = productStatusStr;

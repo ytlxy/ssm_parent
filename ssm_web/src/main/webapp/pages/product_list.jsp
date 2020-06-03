@@ -85,7 +85,7 @@
     <!-- select2 -->
     <!-- bootstrap color picker -->
     <!-- bootstrap time picker -->
-    <!--<script src=".${pageContext.request.contextPath}/.${pageContext.request.contextPath}/.${pageContext.request.contextPath}/plugins/timepicker/bootstrap-timepicker.min.js"></script>-->
+    <!--<script src="./plugins/timepicker/bootstrap-timepicker.min.js"></script>-->
     <!-- Bootstrap WYSIHTML5 -->
     <!--bootstrap-markdown-->
     <!-- CK Editor -->

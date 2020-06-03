@@ -1,6 +1,5 @@
 package com.cn.utils;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -10,7 +9,7 @@ public class DateUtils {
         String format=sdf.format(date);
         return format;
     }
-    public static Date string2date(String str,String patt) throws ParseException {
+    public static Date string2date(String str,String patt) throws Exception {
         SimpleDateFormat sdf=new SimpleDateFormat(patt);
         Date parse=sdf.parse(str);
         return parse;

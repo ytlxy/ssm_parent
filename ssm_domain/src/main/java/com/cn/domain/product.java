@@ -71,7 +71,9 @@ public class product implements Serializable {
         return departrueTime;
     }
 
-    public void setDepartrueTime(Date departrueTime) {
+    public void setDepartrueTime(Date departrueTime) throws Exception {
+        if (departrueTimeStr!=null)
+        departrueTime=DateUtils.string2date(getDepartrueTimeStr(),"yyyy-MM-dd HH:mm");
         this.departrueTime = departrueTime;
     }
 

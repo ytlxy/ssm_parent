@@ -7,4 +7,7 @@ import java.util.List;
 public interface IProductService {
     public List<product> findAll() throws Exception;
     public void save(product product) throws Exception;
+    public product findById(Integer id) throws Exception;
+    public void delete(Long id) throws Exception;
+    public void update(product product) throws Exception;
 }

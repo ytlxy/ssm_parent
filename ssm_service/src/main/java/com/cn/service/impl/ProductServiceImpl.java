@@ -23,4 +23,20 @@ public class ProductServiceImpl implements IProductService {
     public void save(product product) throws Exception {
         iProductDao.save(product);
     }
+
+    @Override
+    public product findById(Integer id) throws Exception {
+        return iProductDao.findById(id);
+    }
+
+    @Override
+    public void delete(Long id) throws Exception {
+        iProductDao.delete(id);
+    }
+
+    @Override
+    public void update(product product) throws Exception {
+        System.out.println(product);
+        iProductDao.update(product);
+    }
 }

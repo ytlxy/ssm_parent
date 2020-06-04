@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: hp
-  Date: 2020/5/31
-  Time: 15:02
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -14,9 +7,6 @@
     <!-- 页面meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-
-
 
     <title>数据 - AdminLTE2定制版</title>
     <meta name="description" content="AdminLTE2定制版">
@@ -36,7 +26,7 @@
     <!-- Date Picker -->
     <!-- Daterange picker -->
     <!-- Bootstrap time Picker -->
-    <!--<link rel="stylesheet" href="${pageContext.request.contextPath}/${pageContext.request.contextPath}/${pageContext.request.contextPath}/plugins/timepicker/bootstrap-timepicker.min.css">-->
+    <!--<link rel="stylesheet" href="/plugins/timepicker/bootstrap-timepicker.min.css">-->
     <!-- bootstrap wysihtml5 - text editor -->
     <!--数据表格-->
     <!-- 表格树 -->
@@ -85,7 +75,7 @@
     <!-- select2 -->
     <!-- bootstrap color picker -->
     <!-- bootstrap time picker -->
-    <!--<script src="./plugins/timepicker/bootstrap-timepicker.min.js"></script>-->
+    <!--<script src="/plugins/timepicker/bootstrap-timepicker.min.js"></script>-->
     <!-- Bootstrap WYSIHTML5 -->
     <!--bootstrap-markdown-->
     <!-- CK Editor -->
@@ -150,183 +140,96 @@
         <section class="content-header">
             <h1>
                 数据管理
-                <small>数据列表</small>
+                <small>产品信息</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
                 <li><a href="#">数据管理</a></li>
-                <li class="active">数据列表</li>
+                <li class="active">数据表单</li>
             </ol>
         </section>
         <!-- 内容头部 /-->
+        <div class="tab-pane" id="tab-common">
+            <form action="${pageContext.request.contextPath}/product/update.do" method="post">
+                <section class="content">
+                    <div class="row data-type">
+                        <div class="col-md-2 title">产品id</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" name="id" placeholder="产品id" value="${product.id}" readonly="true">
+                        </div>
+                        <div class="col-md-2 title">产品编号</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" name="productNum" placeholder="产品编号" value="${product.productNum}">
+                        </div>
 
-        <!-- 正文区域 -->
-        <section class="content">
+                        <div class="col-md-2 title">产品名称</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" name="productName" placeholder="产品名称" value="${product.productName}">
+                        </div>
 
-            <!-- .box-body -->
-            <div class="box box-primary">
-                <div class="box-header with-border">
-                    <h3 class="box-title">列表</h3>
-                </div>
+                        <div class="col-md-2 title">出发城市</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" name="cityName" placeholder="出发城市" value="${product.cityName}">
+                        </div>
 
-                <div class="box-body">
-
-                    <!-- 数据表格 -->
-                    <div class="table-box">
-
-                        <!--工具栏-->
-                        <div class="pull-left">
-                            <div class="form-group form-inline">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default" title="新建"><i class="fa fa-file-o" onclick="location.href='${pageContext.request.contextPath}/pages/product_add.jsp'"></i> 新建</button>
-                                    <button type="button" class="btn btn-default" title="删除"><i class="fa fa-trash-o"></i> 删除</button>
-                                    <button type="button" class="btn btn-default" title="开启"><i class="fa fa-check"></i> 开启</button>
-                                    <button type="button" class="btn btn-default" title="屏蔽"><i class="fa fa-ban"></i> 屏蔽</button>
-                                    <button type="button" class="btn btn-default" title="刷新"><i class="fa fa-refresh"></i> 刷新</button>
+                        <div class="col-md-2 title">出发时间</div>
+                        <div class="col-md-4 data">
+                            <div class="input-group date">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
                                 </div>
+                                <input type="text" class="form-control pull-right" name="departrueTimeStr" id="dateTimePicker" value="${product.departrueTimeStr}">
                             </div>
                         </div>
-                        <div class="box-tools pull-right">
-                            <div class="has-feedback">
-                                <input type="text" class="form-control input-sm" placeholder="搜索">
-                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                            </div>
-                        </div>
-                        <!--工具栏/-->
 
-                        <!--数据列表-->
-                        <table id="dataList" class="table table-bordered table-striped table-hover dataTable">
-                            <thead>
-                            <tr>
-                                <th class="" style="padding-right:0px;">
-                                    <input id="selall" type="checkbox" class="icheckbox_square-blue">
-                                </th>
-                                <th class="sorting_asc">ID</th>
-                                <th class="sorting_desc">编号</th>
-                                <th class="sorting_asc sorting_asc_disabled">产品名称</th>
-                                <th class="sorting_desc sorting_desc_disabled">出发城市</th>
-                                <th class="sorting">出发日期</th>
-                                <th class="text-center sorting">产品价格</th>
-                                <th class="text-center sorting">产品描述</th>
-                                <th class="text-center sorting">状态</th>
-                                <th class="text-center">操作</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <c:forEach items="${productList}" var="product">
-                            <tr>
-                                <td><input name="ids" type="checkbox"></td>
-                                <td>${product.id}</td>
-                                <td>${product.productNum}</td>
-                                <td>${product.productName}</td>
-                                <td>${product.cityName}</td>
-                                <td class="text-center">${product.departrueTimeStr}</td>
-                                <td class="text-center">${product.productPrice}</td>
-                                <td class="text-center">${product.productDesc}</td>
-                                <td class="text-center">${product.productStatusStr}</td>
-                                <td class="text-center">
-                                    <button type="button" class="btn bg-olive btn-xs">订单</button>
-                                    <button type="button" class="btn bg-olive btn-xs" onclick="location.href='${pageContext.request.contextPath}/product/edit.do?id=${product.id}'">编辑</button>
-                                    <button type="button" class="btn bg-olive btn-xs" onclick="location.href='${pageContext.request.contextPath}/product/delete.do?id=${product.id}'">删除</button>
-                                </td>
-                            </tr>
-                            </c:forEach>
-                            </tbody>
-                            <!--
-                        <tfoot>
-                        <tr>
-                        <th>Rendering engine</th>
-                        <th>Browser</th>
-                        <th>Platform(s)</th>
-                        <th>Engine version</th>
-                        <th>CSS grade</th>
-                        </tr>
-                        </tfoot>-->
-                        </table>
-                        <!--数据列表/-->
-
-                        <!--工具栏-->
-                        <div class="pull-left">
-                            <div class="form-group form-inline">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default" title="新建"><i class="fa fa-file-o"></i> 新建</button>
-                                    <button type="button" class="btn btn-default" title="删除"><i class="fa fa-trash-o"></i> 删除</button>
-                                    <button type="button" class="btn btn-default" title="开启"><i class="fa fa-check"></i> 开启</button>
-                                    <button type="button" class="btn btn-default" title="屏蔽"><i class="fa fa-ban"></i> 屏蔽</button>
-                                    <button type="button" class="btn btn-default" title="刷新"><i class="fa fa-refresh"></i> 刷新</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-tools pull-right">
-                            <div class="has-feedback">
-                                <input type="text" class="form-control input-sm" placeholder="搜索">
-                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                            </div>
-                        </div>
-                        <!--工具栏/-->
-
-                    </div>
-                    <!-- 数据表格 /-->
-
-
-                </div>
-                <!-- /.box-body -->
-
-                <!-- .box-footer-->
-                <div class="box-footer">
-                    <div class="pull-left">
-                        <div class="form-group form-inline">
-                            总共2 页，共14 条数据。 每页
-                            <select class="form-control">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select> 条
+                        <div class="col-md-2 title">产品价格</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" name="productPrice" value="${product.productPrice}">
                         </div>
                     </div>
 
-                    <div class="box-tools pull-right">
-                        <ul class="pagination">
-                            <li>
-                                <a href="#" aria-label="Previous">首页</a>
-                            </li>
-                            <li><a href="#">上一页</a></li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">下一页</a></li>
-                            <li>
-                                <a href="#" aria-label="Next">尾页</a>
-                            </li>
-                        </ul>
+                    <div class="col-md-2 title">产品描述</div>
+                    <div class="col-md-4 data">
+                        <textarea class="form-control" rows="3" placeholder="请输入" name="productDesc"></textarea>
                     </div>
 
-                </div>
-                <!-- /.box-footer-->
-
-
-
-            </div>
-
-        </section>
-        <!-- 正文区域 /-->
-
-    </div>
-    <!-- @@close -->
-    <!-- 内容区域 /-->
-
-    <!-- 底部导航 -->
-    <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Version</b> 1.0.8
+                    <div class="col-md-2 title">产品状态</div>
+                    <div class="col-md-4 data">
+                        <select class="form-control-static2" name="productStatus">
+                            <c:choose>
+                                <c:when test="${product.productStatus ==0}">
+                                    <option value="0" selected="selected">关闭</option>
+                                    <option value="1">开启</option>
+                                </c:when>
+                                <c:otherwise>
+                                    <option value="0">关闭</option>
+                                    <option value="1" selected="selected">开启</option>
+                                </c:otherwise>
+                            </c:choose>
+                        </select>
+                    </div>
+                    <div class="col-md-2 title"></div>
+                    <div class="col-md-10 data text-center">
+                        <button type="submit" class="btn bg-maroon">保存</button>
+                        <button type="button" class="btn bg-default" onclick="history.back(-1);">返回</button>
+                    </div>
+                </section>
+            </form>
         </div>
-        <strong>Copyright &copy; 2014-2017 <a href="http://www.itcast.cn">研究院研发部</a>.</strong> All rights reserved.
-    </footer>
-    <!-- 底部导航 /-->
+    </div>
+    <!-- 正文区域 -->
+</div>
+<!-- @@close -->
+<!-- 内容区域 /-->
+
+<!-- 底部导航 -->
+<footer class="main-footer">
+    <div class="pull-right hidden-xs">
+        <b>Version</b> 1.0.8
+    </div>
+    <strong>Copyright &copy; 2014-2017 <a href="http://www.itcast.cn">研究院研发部</a>.</strong> All rights reserved.
+</footer>
+<!-- 底部导航 /-->
 
 </div>
 
@@ -398,26 +301,142 @@
     }
 
 
+
+    $(document).ready(function() {
+
+        // 颜色选取器
+        $(".my-colorpicker1").colorpicker();
+        $(".my-colorpicker2").colorpicker();
+
+    });
+
+
+
+
+    $(document).ready(function() {
+        // 选择框
+        $(".select2").select2();
+    });
+
+
+
+
+    $(document).ready(function() {
+
+        //Date picker
+        $('#datepicker').datepicker({
+            autoclose: true,
+            language: 'zh-CN'
+        });
+
+        // datetime picker
+        $('#dateTimePicker').datetimepicker({
+            format: "mm/dd/yyyy - hh:ii",
+            autoclose: true,
+            todayBtn: true,
+            language: 'zh-CN'
+        });
+
+        //Date range picker
+        $('#reservation').daterangepicker({
+            locale: {
+                applyLabel: '确认',
+                cancelLabel: '取消',
+                fromLabel: '起始时间',
+                toLabel: '结束时间',
+                customRangeLabel: '自定义',
+                firstDay: 1
+            },
+            opens: 'left', // 日期选择框的弹出位置
+            separator: ' 至 '
+            //showWeekNumbers : true,     // 是否显示第几周
+        });
+
+        //Date range picker with time picker
+        $('#reservationtime').daterangepicker({
+            timePicker: true,
+            timePickerIncrement: 30,
+            format: 'MM/DD/YYYY h:mm A',
+            locale: {
+                applyLabel: '确认',
+                cancelLabel: '取消',
+                fromLabel: '起始时间',
+                toLabel: '结束时间',
+                customRangeLabel: '自定义',
+                firstDay: 1
+            },
+            opens: 'right', // 日期选择框的弹出位置
+            separator: ' 至 '
+        });
+
+        //Date range as a button
+        $('#daterange-btn').daterangepicker({
+                locale: {
+                    applyLabel: '确认',
+                    cancelLabel: '取消',
+                    fromLabel: '起始时间',
+                    toLabel: '结束时间',
+                    customRangeLabel: '自定义',
+                    firstDay: 1
+                },
+                opens: 'right', // 日期选择框的弹出位置
+                separator: ' 至 ',
+                ranges: {
+                    '今日': [moment(), moment()],
+                    '昨日': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    '最近7日': [moment().subtract(6, 'days'), moment()],
+                    '最近30日': [moment().subtract(29, 'days'), moment()],
+                    '本月': [moment().startOf('month'), moment().endOf('month')],
+                    '上个月': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                },
+                startDate: moment().subtract(29, 'days'),
+                endDate: moment()
+            },
+            function(start, end) {
+                $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+            }
+        );
+
+    });
+
+
+
+
+    $(document).ready(function() {
+
+        /*table tree*/
+        $("#collapse-table").treetable({
+            expandable: true
+        });
+
+    });
+
+
+
+
+    $(document).ready(function() {
+
+        CKEDITOR.replace('editor1');
+
+        // $(".textarea").wysihtml5({
+        //     locale:'zh-CN'
+        // });
+
+        $("#markdown-textarea").markdown({
+            language: 'zh',
+            autofocus: false,
+            savable: false
+        });
+
+    });
+
+
+
     $(document).ready(function() {
 
         // 激活导航位置
-        setSidebarActive("admin-datalist");
+        setSidebarActive("admin-dataform");
 
-        // 列表按钮 
-        $("#dataList td input[type='checkbox']").iCheck({
-            checkboxClass: 'icheckbox_square-blue',
-            increaseArea: '20%'
-        });
-        // 全选操作 
-        $("#selall").click(function() {
-            var clicks = $(this).is(':checked');
-            if (!clicks) {
-                $("#dataList td input[type='checkbox']").iCheck("uncheck");
-            } else {
-                $("#dataList td input[type='checkbox']").iCheck("check");
-            }
-            $(this).data("clicks", !clicks);
-        });
     });
 </script>
 </body>

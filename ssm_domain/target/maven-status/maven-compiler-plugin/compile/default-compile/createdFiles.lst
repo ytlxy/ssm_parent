@@ -1,1 +1,4 @@
-com\cn\domain\product.class
+com\cn\domain\Member.class
+com\cn\domain\Product.class
+com\cn\domain\Orders.class
+com\cn\domain\Traveller.class

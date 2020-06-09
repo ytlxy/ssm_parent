@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Orders implements Serializable {
     private Long id;
-    private String orderNun;
+    private String orderNum;
     private Date orderTime;
     private String orderTimeStr;
     private Integer peopleCount;
@@ -20,24 +20,23 @@ public class Orders implements Serializable {
     private Product product;
     private List<Traveller> travellers;
     private Member member;
+    private Long productId;
+    private Long memberId;// 用户id
 
-    @Override
-    public String toString() {
-        return "orders{" +
-                "id=" + id +
-                ", orderNun='" + orderNun + '\'' +
-                ", orderTime=" + orderTime +
-                ", orderTimeStr='" + orderTimeStr + '\'' +
-                ", peopleCount=" + peopleCount +
-                ", orderDesc='" + orderDesc + '\'' +
-                ", payType=" + payType +
-                ", payTypeStr='" + payTypeStr + '\'' +
-                ", orderStatus=" + orderStatus +
-                ", orderStatusStr='" + orderStatusStr + '\'' +
-                ", product=" + product +
-                ", travellers=" + travellers +
-                ", member=" + member +
-                '}';
+    public Long getProductId() {
+        return productId;
+    }
+
+    public void setProductId(Long productId) {
+        this.productId = productId;
+    }
+
+    public Long getMemberId() {
+        return memberId;
+    }
+
+    public void setMemberId(Long memberId) {
+        this.memberId = memberId;
     }
 
     public Long getId() {
@@ -48,12 +47,12 @@ public class Orders implements Serializable {
         this.id = id;
     }
 
-    public String getOrderNun() {
-        return orderNun;
+    public String getOrderNum() {
+        return orderNum;
     }
 
-    public void setOrderNun(String orderNun) {
-        this.orderNun = orderNun;
+    public void setOrderNum(String orderNum) {
+        this.orderNum = orderNum;
     }
 
     public Date getOrderTime() {
@@ -158,5 +157,26 @@ public class Orders implements Serializable {
 
     public void setMember(Member member) {
         member = member;
+    }
+
+    @Override
+    public String toString() {
+        return "Orders{" +
+                "id=" + id +
+                ", orderNum='" + orderNum + '\'' +
+                ", orderTime=" + orderTime +
+                ", orderTimeStr='" + orderTimeStr + '\'' +
+                ", peopleCount=" + peopleCount +
+                ", orderDesc='" + orderDesc + '\'' +
+                ", payType=" + payType +
+                ", payTypeStr='" + payTypeStr + '\'' +
+                ", orderStatus=" + orderStatus +
+                ", orderStatusStr='" + orderStatusStr + '\'' +
+                ", product=" + product +
+                ", travellers=" + travellers +
+                ", member=" + member +
+                ", productId=" + productId +
+                ", memberId=" + memberId +
+                '}';
     }
 }

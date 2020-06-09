@@ -211,17 +211,17 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <c:forEach items="${orderslist}" var="orders">
+                            <c:forEach items="${orderList}" var="Orders">
                                 <tr>
                                     <td><input name="ids" type="checkbox"></td>
-                                    <td>${orders.id}</td>
-                                    <td>${orders.orderNun}</td>
-                                    <td>${orders.product.productName}</td>
-                                    <td>${orders.product.productPrice}</td>
-                                    <td>${orders.orderTimeStr}</td>
-                                    <td class="text-center">${orders.orderStatusStr}</td>
+                                    <td>${Orders.id}</td>
+                                    <td>${Orders.orderNum}</td>
+                                    <td>${Orders.product.cityName}</td>
+                                    <td>${Orders.product.productPrice}</td>
+                                    <td>${Orders.orderTimeStr}</td>
+                                    <td class="text-center">${Orders.orderStatusStr}</td>
                                     <td class="text-center">
-                                        <button type="button" class="btn bg-olive btn-xs" onclick="location.href='${pageContext.request.contextPath}/orders/findAll.do?id=${orders.id}'">编辑</button>
+                                        <button type="button" class="btn bg-olive btn-xs" onclick="location.href='${pageContext.request.contextPath}/orders/findAll.do?id=${Orders.id}'">编辑</button>
                                     </td>
                                 </tr>
                             </c:forEach>

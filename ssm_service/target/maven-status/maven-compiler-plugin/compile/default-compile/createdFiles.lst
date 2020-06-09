@@ -1,2 +1,4 @@
+com\cn\service\impl\OrdersServiceImpl.class
 com\cn\service\impl\ProductServiceImpl.class
 com\cn\service\IProductService.class
+com\cn\service\IOrdersService.class

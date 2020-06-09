@@ -1,7 +1,7 @@
 package com.cn.service.impl;
 
 import com.cn.dao.IProductDao;
-import com.cn.domain.product;
+import com.cn.domain.Product;
 import com.cn.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,17 +15,17 @@ public class ProductServiceImpl implements IProductService {
     @Autowired
     private IProductDao iProductDao;
     @Override
-    public List<product> findAll() throws Exception {
+    public List<Product> findAll() throws Exception {
         return iProductDao.findAll();
     }
 
     @Override
-    public void save(product product) throws Exception {
+    public void save(Product product) throws Exception {
         iProductDao.save(product);
     }
 
     @Override
-    public product findById(Integer id) throws Exception {
+    public Product findById(Integer id) throws Exception {
         return iProductDao.findById(id);
     }
 
@@ -35,7 +35,7 @@ public class ProductServiceImpl implements IProductService {
     }
 
     @Override
-    public void update(product product) throws Exception {
+    public void update(Product product) throws Exception {
         System.out.println(product);
         iProductDao.update(product);
     }

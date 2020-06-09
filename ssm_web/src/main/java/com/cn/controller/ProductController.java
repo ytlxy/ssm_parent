@@ -1,8 +1,7 @@
 package com.cn.controller;
 
-import com.cn.domain.product;
+import com.cn.domain.Product;
 import com.cn.service.IProductService;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +16,7 @@ public class ProductController {
     @Autowired
     private IProductService productService;
     @RequestMapping("/save.do")
-    public String save(product product)throws Exception{
+    public String save(Product product)throws Exception{
     productService.save(product);
     return "redirect:findAll.do";
     }
@@ -29,7 +28,7 @@ public class ProductController {
     @RequestMapping("/findAll.do")
     public ModelAndView findAll() throws Exception{
     ModelAndView mv=new ModelAndView();
-    List<product> pr=productService.findAll();
+    List<Product> pr=productService.findAll();
     mv.addObject("productList",pr);
     mv.setViewName("product_list");
     return mv;
@@ -42,14 +41,14 @@ public class ProductController {
     @RequestMapping("/edit.do")
     public ModelAndView edit(Integer id) throws Exception{
         ModelAndView mv=new ModelAndView();
-        product product=productService.findById(id);
+        Product product=productService.findById(id);
         mv.addObject("product",product);
         mv.addObject("id",product.getId());
         mv.setViewName("product_edit");
         return mv;
     }
     @RequestMapping("/update.do")
-    public String edit(product product) throws Exception{
+    public String edit(Product product) throws Exception{
 //        System.out.println(product);
         productService.update(product);
         return "redirect:findAll.do";

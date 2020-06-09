@@ -27,4 +27,5 @@
     <mvc:annotation-driven/>
 <!--    aop注解支持-->
     <aop:aspectj-autoproxy proxy-target-class="true"/>
+    <mvc:default-servlet-handler />
 </beans>

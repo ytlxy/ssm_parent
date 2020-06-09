@@ -226,8 +226,8 @@
                                 <td class="text-center">${product.productStatusStr}</td>
                                 <td class="text-center">
                                     <button type="button" class="btn bg-olive btn-xs">订单</button>
-                                    <button type="button" class="btn bg-olive btn-xs">详情</button>
-                                    <button type="button" class="btn bg-olive btn-xs">编辑</button>
+                                    <button type="button" class="btn bg-olive btn-xs" onclick="location.href='${pageContext.request.contextPath}/product/edit.do?id=${product.id}'">编辑</button>
+                                    <button type="button" class="btn bg-olive btn-xs" onclick="location.href='${pageContext.request.contextPath}/product/delete.do?id=${product.id}'">删除</button>
                                 </td>
                             </tr>
                             </c:forEach>

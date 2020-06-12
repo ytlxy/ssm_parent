@@ -224,7 +224,7 @@
                                     <td class="text-center">${Orders.orderStatusStr}</td>
                                     <td class="text-center">
                                         <button type="button" class="btn bg-olive bth-xs" onclick="location.href='${pageContext.request.contextPath}/orders/findById.do?id=${Orders.id}'">详情</button>
-                                        <button type="button" class="btn bg-olive btn-xs" onclick="location.href='${pageContext.request.contextPath}/orders/edit.do'">编辑</button>
+                                        <button type="button" class="btn bg-olive btn-xs" onclick="location.href='${pageContext.request.contextPath}/orders/edit.do?id=${Orders.id}'">编辑</button>
 
                                     </td>
                                 </tr>

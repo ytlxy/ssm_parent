@@ -8,12 +8,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+
 @Service
 //业务层子类必须要有Transactional
 @Transactional
 public class ProductServiceImpl implements IProductService {
     @Autowired
     private IProductDao iProductDao;
+
     @Override
     public List<Product> findAll() throws Exception {
         return iProductDao.findAll();

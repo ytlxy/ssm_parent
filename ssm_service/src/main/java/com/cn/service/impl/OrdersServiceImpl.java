@@ -9,19 +9,31 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+
 @Service
 @Transactional
 public class OrdersServiceImpl implements IOrdersService {
     @Autowired
     private IOrderDao iOrderDao;
+
     @Override
-    public List<Orders> findAll(int page,int pageSize) throws Exception {
-        PageHelper.startPage(page,pageSize);
+    public List<Orders> findAll(int page, int pageSize) throws Exception {
+        PageHelper.startPage(page, pageSize);
         return iOrderDao.findAll();
     }
 
     @Override
     public Orders findById(Integer id) {
         return iOrderDao.findById(id);
+    }
+
+    @Override
+    public void save(Orders orders) {
+        iOrderDao.save(orders);
+    }
+
+    @Override
+    public void update(Orders orders) {
+        iOrderDao.update(orders);
     }
 }

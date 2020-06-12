@@ -13,8 +13,6 @@
     <meta name="keywords" content="AdminLTE2定制版">
 
 
-
-
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -48,12 +46,6 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-
-
-
-
-
 
 
     <!-- jQuery 2.2.3 -->
@@ -102,20 +94,24 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/datepicker/datepicker3.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.theme.default.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.theme.default.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/select2/select2.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/colorpicker/bootstrap-colorpicker.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/adminLTE/css/AdminLTE.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/adminLTE/css/skins/_all-skins.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.skinNice.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-slider/slider.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
 </head>
 
 <body class="hold-transition skin-purple sidebar-mini">
@@ -155,21 +151,25 @@
                     <div class="row data-type">
                         <div class="col-md-2 title">产品id</div>
                         <div class="col-md-4 data">
-                            <input type="text" class="form-control" name="id" placeholder="产品id" value="${product.id}" readonly="true">
+                            <input type="text" class="form-control" name="id" placeholder="产品id" value="${product.id}"
+                                   readonly="true">
                         </div>
                         <div class="col-md-2 title">产品编号</div>
                         <div class="col-md-4 data">
-                            <input type="text" class="form-control" name="productNum" placeholder="产品编号" value="${product.productNum}">
+                            <input type="text" class="form-control" name="productNum" placeholder="产品编号"
+                                   value="${product.productNum}">
                         </div>
 
                         <div class="col-md-2 title">产品名称</div>
                         <div class="col-md-4 data">
-                            <input type="text" class="form-control" name="productName" placeholder="产品名称" value="${product.productName}">
+                            <input type="text" class="form-control" name="productName" placeholder="产品名称"
+                                   value="${product.productName}">
                         </div>
 
                         <div class="col-md-2 title">出发城市</div>
                         <div class="col-md-4 data">
-                            <input type="text" class="form-control" name="cityName" placeholder="出发城市" value="${product.cityName}">
+                            <input type="text" class="form-control" name="cityName" placeholder="出发城市"
+                                   value="${product.cityName}">
                         </div>
 
                         <div class="col-md-2 title">出发时间</div>
@@ -178,7 +178,8 @@
                                 <div class="input-group-addon">
                                     <i class="fa fa-calendar"></i>
                                 </div>
-                                <input type="text" class="form-control pull-right" name="departrueTimeStr" id="dateTimePicker" value="${product.departrueTimeStr}">
+                                <input type="text" class="form-control pull-right" name="departrueTimeStr"
+                                       id="dateTimePicker" value="${product.departrueTimeStr}">
                             </div>
                         </div>
 
@@ -280,7 +281,7 @@
 <script src="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
 <script src="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js"></script>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         // 选择框
         $(".select2").select2();
 
@@ -301,8 +302,7 @@
     }
 
 
-
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         // 颜色选取器
         $(".my-colorpicker1").colorpicker();
@@ -311,17 +311,13 @@
     });
 
 
-
-
-    $(document).ready(function() {
+    $(document).ready(function () {
         // 选择框
         $(".select2").select2();
     });
 
 
-
-
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         //Date picker
         $('#datepicker').datepicker({
@@ -392,7 +388,7 @@
                 startDate: moment().subtract(29, 'days'),
                 endDate: moment()
             },
-            function(start, end) {
+            function (start, end) {
                 $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
             }
         );
@@ -400,9 +396,7 @@
     });
 
 
-
-
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         /*table tree*/
         $("#collapse-table").treetable({
@@ -412,9 +406,7 @@
     });
 
 
-
-
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         CKEDITOR.replace('editor1');
 
@@ -431,8 +423,7 @@
     });
 
 
-
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         // 激活导航位置
         setSidebarActive("admin-dataform");

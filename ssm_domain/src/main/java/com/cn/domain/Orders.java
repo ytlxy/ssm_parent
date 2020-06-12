@@ -5,7 +5,7 @@ import com.cn.utils.DateUtils;
 import java.util.Date;
 import java.util.List;
 
-public class Orders{
+public class Orders {
     private Long id; //主键 id
     private String orderNum; //订单编号 唯一
     private Date orderTime; //订单的时间
@@ -47,8 +47,8 @@ public class Orders{
     }
 
     public String getOrderTimeStr() {
-        if(orderTime != null){
-            orderTimeStr = DateUtils.date2string(orderTime,"yyyy-MM-dd HH:ss");
+        if (orderTime != null) {
+            orderTimeStr = DateUtils.date2string(orderTime, "yyyy-MM-dd HH:ss");
         }
         return orderTimeStr;
     }
@@ -67,9 +67,10 @@ public class Orders{
 
     public String getOrderStatusStr() {
         //订单状态(0 未支付 1 已经支付)
-        if(orderStatus != null){
+        if (orderStatus != null) {
             if (orderStatus != 1) {
-                orderStatusStr = "未支付"; }
+                orderStatusStr = "未支付";
+            }
             if (orderStatus == 1) {
                 orderStatusStr = "已经支付";
             }
@@ -123,15 +124,18 @@ public class Orders{
 
     public String getPayTypeStr() {
         //支付方式(-1 未支付 0 支付宝 1 微信 2 其他)
-        if(payType != null){
+        if (payType != null) {
             if (payType == 0) {
                 payTypeStr = "支付宝";
-            }if (payType == 1) {
+            }
+            if (payType == 1) {
                 payTypeStr = "微信";
-            }if (payType == 2) {
+            }
+            if (payType == 2) {
                 payTypeStr = "其他";
-            }if (payType == -1 ) {
-                payTypeStr="未支付";
+            }
+            if (payType == -1) {
+                payTypeStr = "未支付";
             }
         }
         return payTypeStr;

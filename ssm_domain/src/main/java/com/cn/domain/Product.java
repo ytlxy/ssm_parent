@@ -76,8 +76,8 @@ public class Product implements Serializable {
     }
 
     public String getDepartrueTimeStr() {
-        if(departrueTime!=null){
-            setDepartrueTimeStr(DateUtils.date2string(departrueTime,"yyyy-MM-dd HH:mm:ss"));
+        if (departrueTime != null) {
+            setDepartrueTimeStr(DateUtils.date2string(departrueTime, "yyyy-MM-dd HH:mm:ss"));
         }
         return departrueTimeStr;
     }
@@ -111,12 +111,12 @@ public class Product implements Serializable {
     }
 
     public String getProductStatusStr() {
-        if(getProductStatus()!=null){
-            if (getProductStatus()==0){
-                productStatusStr="关闭";
+        if (getProductStatus() != null) {
+            if (getProductStatus() == 0) {
+                productStatusStr = "关闭";
             }
-            if(getProductStatus()==1){
-                productStatusStr="开启";
+            if (getProductStatus() == 1) {
+                productStatusStr = "开启";
             }
         }
         return productStatusStr;

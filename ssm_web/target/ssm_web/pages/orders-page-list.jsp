@@ -16,13 +16,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 
-
-
     <title>数据 - AdminLTE2定制版</title>
     <meta name="description" content="AdminLTE2定制版">
     <meta name="keywords" content="AdminLTE2定制版">
-
-
 
 
     <!-- Tell the browser to be responsive to screen width -->
@@ -58,12 +54,6 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-
-
-
-
-
 
 
     <!-- jQuery 2.2.3 -->
@@ -112,20 +102,24 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/datepicker/datepicker3.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.theme.default.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.theme.default.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/select2/select2.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/colorpicker/bootstrap-colorpicker.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/adminLTE/css/AdminLTE.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/adminLTE/css/skins/_all-skins.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.skinNice.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-slider/slider.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
 </head>
 
 <body class="hold-transition skin-purple sidebar-mini">
@@ -178,11 +172,23 @@
                         <div class="pull-left">
                             <div class="form-group form-inline">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-default" title="新建"><i class="fa fa-file-o" onclick="location.href='${pageContext.request.contextPath}/pages/orders-add.jsp'"></i> 新建</button>
-                                    <button type="button" class="btn btn-default" title="删除"><i class="fa fa-trash-o"></i> 删除</button>
-                                    <button type="button" class="btn btn-default" title="开启"><i class="fa fa-check"></i> 开启</button>
-                                    <button type="button" class="btn btn-default" title="屏蔽"><i class="fa fa-ban"></i> 屏蔽</button>
-                                    <button type="button" class="btn btn-default" title="刷新"><i class="fa fa-refresh" onclick="location.href='${pageContext.request.contextPath}/orders/findAll.do?page=1&pageSize=${pageInfo.pageSize}'"></i> 刷新</button>
+                                    <button type="button" class="btn btn-default" title="新建"><i class="fa fa-file-o"
+                                                                                                onclick="location.href='${pageContext.request.contextPath}/pages/orders-add.jsp'"></i>
+                                        新建
+                                    </button>
+                                    <button type="button" class="btn btn-default" title="删除"><i
+                                            class="fa fa-trash-o"></i> 删除
+                                    </button>
+                                    <button type="button" class="btn btn-default" title="开启"><i class="fa fa-check"></i>
+                                        开启
+                                    </button>
+                                    <button type="button" class="btn btn-default" title="屏蔽"><i class="fa fa-ban"></i>
+                                        屏蔽
+                                    </button>
+                                    <button type="button" class="btn btn-default" title="刷新"><i class="fa fa-refresh"
+                                                                                                onclick="location.href='${pageContext.request.contextPath}/orders/findAll.do?page=1&pageSize=${pageInfo.pageSize}'"></i>
+                                        刷新
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -223,8 +229,14 @@
                                     <td>${Orders.orderTimeStr}</td>
                                     <td class="text-center">${Orders.orderStatusStr}</td>
                                     <td class="text-center">
-                                        <button type="button" class="btn bg-olive bth-xs" onclick="location.href='${pageContext.request.contextPath}/orders/findById.do?id=${Orders.id}'">详情</button>
-                                        <button type="button" class="btn bg-olive btn-xs" onclick="location.href='${pageContext.request.contextPath}/orders/edit.do?id=${Orders.id}'">编辑</button>
+                                        <button type="button" class="btn bg-olive bth-xs"
+                                                onclick="location.href='${pageContext.request.contextPath}/orders/findById.do?id=${Orders.id}'">
+                                            详情
+                                        </button>
+                                        <button type="button" class="btn bg-olive btn-xs"
+                                                onclick="location.href='${pageContext.request.contextPath}/orders/edit.do?id=${Orders.id}'">
+                                            编辑
+                                        </button>
 
                                     </td>
                                 </tr>
@@ -247,11 +259,21 @@
                         <div class="pull-left">
                             <div class="form-group form-inline">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-default" title="新建"><i class="fa fa-file-o"></i> 新建</button>
-                                    <button type="button" class="btn btn-default" title="删除"><i class="fa fa-trash-o"></i> 删除</button>
-                                    <button type="button" class="btn btn-default" title="开启"><i class="fa fa-check"></i> 开启</button>
-                                    <button type="button" class="btn btn-default" title="屏蔽"><i class="fa fa-ban"></i> 屏蔽</button>
-                                    <button type="button" class="btn btn-default" title="刷新"><i class="fa fa-refresh"></i> 刷新</button>
+                                    <button type="button" class="btn btn-default" title="新建"><i
+                                            class="fa fa-file-o"></i> 新建
+                                    </button>
+                                    <button type="button" class="btn btn-default" title="删除"><i
+                                            class="fa fa-trash-o"></i> 删除
+                                    </button>
+                                    <button type="button" class="btn btn-default" title="开启"><i class="fa fa-check"></i>
+                                        开启
+                                    </button>
+                                    <button type="button" class="btn btn-default" title="屏蔽"><i class="fa fa-ban"></i>
+                                        屏蔽
+                                    </button>
+                                    <button type="button" class="btn btn-default" title="刷新"><i
+                                            class="fa fa-refresh"></i> 刷新
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -293,24 +315,29 @@
                     <div class="box-tools pull-right">
                         <ul class="pagination">
                             <li>
-                                <a href="${pageContext.request.contextPath}/orders/findAll.do?page=1&pageSize=${pageInfo.pageSize}" aria-label="Previous">首页</a>
+                                <a href="${pageContext.request.contextPath}/orders/findAll.do?page=1&pageSize=${pageInfo.pageSize}"
+                                   aria-label="Previous">首页</a>
                             </li>
-                            <li><a href="${pageContext.request.contextPath}/orders/findAll.do?page=${pageInfo.pageNum-1}&pageSize=${pageInfo.pageSize}">上一页</a></li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/orders/findAll.do?page=${pageInfo.pageNum-1}&pageSize=${pageInfo.pageSize}">上一页</a>
+                            </li>
                             <c:forEach begin="1" end="${pageInfo.pages}" var="pageNum">
                                 <li>
                                     <a href="${pageContext.request.contextPath}/orders/findAll.do?page=${pageNum}&pageSize=${pageInfo.pageSize}">${pageNum}</a>
                                 </li>
                             </c:forEach>
-                            <li><a href="${pageContext.request.contextPath}/orders/findAll.do?page=${pageInfo.pageNum+1}&pageSize=${pageInfo.pageSize}">下一页</a></li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/orders/findAll.do?page=${pageInfo.pages}&pageSize=${pageInfo.pageSize}" aria-label="Next">尾页</a>
+                                <a href="${pageContext.request.contextPath}/orders/findAll.do?page=${pageInfo.pageNum+1}&pageSize=${pageInfo.pageSize}">下一页</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/orders/findAll.do?page=${pageInfo.pages}&pageSize=${pageInfo.pageSize}"
+                                   aria-label="Next">尾页</a>
                             </li>
                         </ul>
                     </div>
 
                 </div>
                 <!-- /.box-footer-->
-
 
 
             </div>
@@ -380,7 +407,7 @@
 <script src="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
 <script src="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js"></script>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         // 选择框
         $(".select2").select2();
 
@@ -399,14 +426,15 @@
             liObj.addClass("active");
         }
     }
+
     function changPageSize() {
         var pageSize = $("#changPageSize").val();
 
         location.href = "${pageContext.request.contextPath}/orders/findAll.do?page=1&pageSize="
-            +pageSize;
+            + pageSize;
     }
 
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         // 激活导航位置
         setSidebarActive("admin-datalist");
@@ -417,7 +445,7 @@
             increaseArea: '20%'
         });
         // 全选操作
-        $("#selall").click(function() {
+        $("#selall").click(function () {
             var clicks = $(this).is(':checked');
             if (!clicks) {
                 $("#dataList td input[type='checkbox']").iCheck("uncheck");

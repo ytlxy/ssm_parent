@@ -9,13 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 
-
-
     <title>数据 - AdminLTE2定制版</title>
     <meta name="description" content="AdminLTE2定制版">
     <meta name="keywords" content="AdminLTE2定制版">
-
-
 
 
     <!-- Tell the browser to be responsive to screen width -->
@@ -51,12 +47,6 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-
-
-
-
-
 
 
     <!-- jQuery 2.2.3 -->
@@ -105,20 +95,24 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/datepicker/datepicker3.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.theme.default.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.theme.default.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/select2/select2.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/colorpicker/bootstrap-colorpicker.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/adminLTE/css/AdminLTE.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/adminLTE/css/skins/_all-skins.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.skinNice.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-slider/slider.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
 </head>
 
 <body class="hold-transition skin-purple sidebar-mini">
@@ -158,83 +152,83 @@
                     <div class="panel-heading">订单信息</div>
                     <div class="row data-type">
 
-                    <div class="col-md-2 title">订单编号</div>
-                    <div class="col-md-4 data">
-                        <input type="text" class="form-control" placeholder="订单编号"
-                               value="${orders.orderNum }" name="orderNum">
-                    </div>
+                        <div class="col-md-2 title">订单编号</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" placeholder="订单编号"
+                                   value="${orders.orderNum }" name="orderNum">
+                        </div>
 
-                    <div class="col-md-2 title">出行人数</div>
-                    <div class="col-md-4 data">
+                        <div class="col-md-2 title">出行人数</div>
+                        <div class="col-md-4 data">
                             <input type="text" class="form-control pull-right"
                                    id="datepicker-a3"
                                    value="${orders.peopleCount }" name="peopleCount">
-                    </div>
-                    <div class="col-md-2 title">产品id</div>
-                    <div class="col-md-4 data">
-                        <input type="text" class="form-control" placeholder="产品id"
-                               value="${orders.productId }" name="productId" readonly="readonly">
-                    </div>
+                        </div>
+                        <div class="col-md-2 title">产品id</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" placeholder="产品id"
+                                   value="${orders.productId }" name="productId" readonly="readonly">
+                        </div>
 
-                    <div class="col-md-2 title">会员id</div>
-                    <div class="col-md-4 data">
-                        <input type="text" class="form-control" placeholder="会员id"
-                               value="${orders.memberId }" readonly="readonly" name="memberId">
-                    </div>
+                        <div class="col-md-2 title">会员id</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" placeholder="会员id"
+                                   value="${orders.memberId }" readonly="readonly" name="memberId">
+                        </div>
 
-                    <div class="col-md-2 title">支付方式</div>
-                    <div class="col-md-4 data">
-                        <select class="form-control-static2" name="payType">
-                            <c:choose>
-                                <c:when test="${orders.payType==-1}">
-                                    <option value="-1" selected="selected">未支付</option>
-                                    <option value="0">支付宝</option>
-                                    <option value="1">微信</option>
-                                    <option value="2">其他</option>
-                                </c:when>
-                                <c:when test="${orders.payType==0}">
-                                    <option value="-1">未支付</option>
-                                    <option value="0" selected="selected">支付宝</option>
-                                    <option value="1">微信</option>
-                                    <option value="2">其他</option>
-                                </c:when>
-                                <c:when test="${orders.payType==1}">
-                                    <option value="-1">未支付</option>
-                                    <option value="0">支付宝</option>
-                                    <option value="1" selected="selected">微信</option>
-                                    <option value="2">其他</option>
-                                </c:when>
-                                <c:when test="${orders.payType==2}">
-                                    <option value="-1">未支付</option>
-                                    <option value="0">支付宝</option>
-                                    <option value="1">微信</option>
-                                    <option value="2" selected="selected">其他</option>
-                                </c:when>
-                            </c:choose>
-                        </select>
-                    </div>
-                    <div class="col-md-2 title">订单状态</div>
-                    <div class="col-md-4 data">
-                        <select class="form-control-static2" name="orderStatus">
-                            <c:choose>
-                                <c:when test="${orders.orderStatus==0}">
-                                    <option value="0" selected="selected">未支付</option>
-                                    <option value="1">已支付</option>
-                                </c:when>
-                                <c:otherwise>
-                                    <option value="0">未支付</option>
-                                    <option value="1" selected="selected">已支付</option>
-                                </c:otherwise>
-                            </c:choose>
-                        </select>
-                    </div>
+                        <div class="col-md-2 title">支付方式</div>
+                        <div class="col-md-4 data">
+                            <select class="form-control-static2" name="payType">
+                                <c:choose>
+                                    <c:when test="${orders.payType==-1}">
+                                        <option value="-1" selected="selected">未支付</option>
+                                        <option value="0">支付宝</option>
+                                        <option value="1">微信</option>
+                                        <option value="2">其他</option>
+                                    </c:when>
+                                    <c:when test="${orders.payType==0}">
+                                        <option value="-1">未支付</option>
+                                        <option value="0" selected="selected">支付宝</option>
+                                        <option value="1">微信</option>
+                                        <option value="2">其他</option>
+                                    </c:when>
+                                    <c:when test="${orders.payType==1}">
+                                        <option value="-1">未支付</option>
+                                        <option value="0">支付宝</option>
+                                        <option value="1" selected="selected">微信</option>
+                                        <option value="2">其他</option>
+                                    </c:when>
+                                    <c:when test="${orders.payType==2}">
+                                        <option value="-1">未支付</option>
+                                        <option value="0">支付宝</option>
+                                        <option value="1">微信</option>
+                                        <option value="2" selected="selected">其他</option>
+                                    </c:when>
+                                </c:choose>
+                            </select>
+                        </div>
+                        <div class="col-md-2 title">订单状态</div>
+                        <div class="col-md-4 data">
+                            <select class="form-control-static2" name="orderStatus">
+                                <c:choose>
+                                    <c:when test="${orders.orderStatus==0}">
+                                        <option value="0" selected="selected">未支付</option>
+                                        <option value="1">已支付</option>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <option value="0">未支付</option>
+                                        <option value="1" selected="selected">已支付</option>
+                                    </c:otherwise>
+                                </c:choose>
+                            </select>
+                        </div>
 
-                    <div class="col-md-2 title rowHeight2x">其他信息</div>
-                    <div class="col-md-10 data rowHeight2x">
+                        <div class="col-md-2 title rowHeight2x">其他信息</div>
+                        <div class="col-md-10 data rowHeight2x">
 						<textarea class="form-control" rows="3" placeholder="其他信息" name="orderDesc">
                             ${orders.orderDesc }
                         </textarea>
-                    </div>
+                        </div>
                         <div class="col-md-2 title">订单id</div>
                         <div class="col-md-4 data">
                             <input type="text" class="form-control" placeholder="订单id"
@@ -313,7 +307,7 @@
 <script src="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
 <script src="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js"></script>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         // 选择框
         $(".select2").select2();
 
@@ -334,8 +328,7 @@
     }
 
 
-
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         // 颜色选取器
         $(".my-colorpicker1").colorpicker();
@@ -344,17 +337,13 @@
     });
 
 
-
-
-    $(document).ready(function() {
+    $(document).ready(function () {
         // 选择框
         $(".select2").select2();
     });
 
 
-
-
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         //Date picker
         $('#datepicker').datepicker({
@@ -425,7 +414,7 @@
                 startDate: moment().subtract(29, 'days'),
                 endDate: moment()
             },
-            function(start, end) {
+            function (start, end) {
                 $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
             }
         );
@@ -433,9 +422,7 @@
     });
 
 
-
-
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         /*table tree*/
         $("#collapse-table").treetable({
@@ -445,9 +432,7 @@
     });
 
 
-
-
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         CKEDITOR.replace('editor1');
 
@@ -464,8 +449,7 @@
     });
 
 
-
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         // 激活导航位置
         setSidebarActive("admin-dataform");

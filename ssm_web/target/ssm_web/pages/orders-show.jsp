@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+         pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -172,7 +172,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach items="${orders.travellers}" var="traveller" >
+                    <c:forEach items="${orders.travellers}" var="traveller">
                         <tr>
                             <td>${traveller.travlelerTypeStr}</td>
                             <td><input type="text" size="10" value="${traveller.name}"
@@ -227,7 +227,8 @@
             <div class="box-tools text-center">
 
                 <button type="button" class="btn bg-default"
-                        onclick="history.back(-1);">返回</button>
+                        onclick="history.back(-1);">返回
+                </button>
             </div>
             <!--工具栏/--> </section>
         <!-- 正文区域 /-->
@@ -333,13 +334,13 @@
         src="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         // 选择框
         $(".select2").select2();
 
         // WYSIHTML5编辑器
         $(".textarea").wysihtml5({
-            locale : 'zh-CN'
+            locale: 'zh-CN'
         });
     });
 
@@ -352,18 +353,18 @@
         }
     }
 
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         // 激活导航位置
         setSidebarActive("order-manage");
 
         // 列表按钮
         $("#dataList td input[type='checkbox']").iCheck({
-            checkboxClass : 'icheckbox_square-blue',
-            increaseArea : '20%'
+            checkboxClass: 'icheckbox_square-blue',
+            increaseArea: '20%'
         });
         // 全选操作
-        $("#selall").click(function() {
+        $("#selall").click(function () {
             var clicks = $(this).is(':checked');
             if (!clicks) {
                 $("#dataList td input[type='checkbox']").iCheck("uncheck");

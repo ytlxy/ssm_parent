@@ -8,13 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 
-
-
     <title>数据 - AdminLTE2定制版</title>
     <meta name="description" content="AdminLTE2定制版">
     <meta name="keywords" content="AdminLTE2定制版">
-
-
 
 
     <!-- Tell the browser to be responsive to screen width -->
@@ -50,12 +46,6 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-
-
-
-
-
 
 
     <!-- jQuery 2.2.3 -->
@@ -104,20 +94,24 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/datepicker/datepicker3.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.theme.default.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.theme.default.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/select2/select2.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/colorpicker/bootstrap-colorpicker.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/adminLTE/css/AdminLTE.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/adminLTE/css/skins/_all-skins.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.skinNice.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-slider/slider.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
 </head>
 
 <body class="hold-transition skin-purple sidebar-mini">
@@ -161,7 +155,8 @@
                                         <!-- start message -->
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="${pageContext.request.contextPath}/img/user9.jpg" class="img-circle" alt="User Image">
+                                                <img src="${pageContext.request.contextPath}/img/user9.jpg"
+                                                     class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 系统消息
@@ -174,7 +169,8 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="${pageContext.request.contextPath}/img/user9.jpg" class="img-circle" alt="User Image">
+                                                <img src="${pageContext.request.contextPath}/img/user9.jpg"
+                                                     class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 团队消息
@@ -186,7 +182,8 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="${pageContext.request.contextPath}/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="${pageContext.request.contextPath}/img/user4-128x128.jpg"
+                                                     class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 Developers
@@ -198,7 +195,8 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="${pageContext.request.contextPath}/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="${pageContext.request.contextPath}/img/user3-128x128.jpg"
+                                                     class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 Sales Department
@@ -210,7 +208,8 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="${pageContext.request.contextPath}/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="${pageContext.request.contextPath}/img/user4-128x128.jpg"
+                                                     class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 Reviewers
@@ -242,7 +241,8 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="fa fa-warning text-yellow"></i> Very long description here that may not
+                                            <i class="fa fa-warning text-yellow"></i> Very long description here that
+                                            may not
                                             fit into the page and may cause design problems
                                         </a>
                                     </li>
@@ -285,7 +285,9 @@
                                                 <small class="pull-right">20%</small>
                                             </h3>
                                             <div class="progress xs">
-                                                <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar progress-bar-aqua" style="width: 20%"
+                                                     role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                                     aria-valuemax="100">
                                                     <span class="sr-only">20% Complete</span>
                                                 </div>
                                             </div>
@@ -300,7 +302,9 @@
                                                 <small class="pull-right">40%</small>
                                             </h3>
                                             <div class="progress xs">
-                                                <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar progress-bar-green" style="width: 40%"
+                                                     role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                                     aria-valuemax="100">
                                                     <span class="sr-only">40% Complete</span>
                                                 </div>
                                             </div>
@@ -315,7 +319,9 @@
                                                 <small class="pull-right">60%</small>
                                             </h3>
                                             <div class="progress xs">
-                                                <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar progress-bar-red" style="width: 60%"
+                                                     role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                                     aria-valuemax="100">
                                                     <span class="sr-only">60% Complete</span>
                                                 </div>
                                             </div>
@@ -330,7 +336,9 @@
                                                 <small class="pull-right">80%</small>
                                             </h3>
                                             <div class="progress xs">
-                                                <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar progress-bar-yellow" style="width: 80%"
+                                                     role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                                     aria-valuemax="100">
                                                     <span class="sr-only">80% Complete</span>
                                                 </div>
                                             </div>
@@ -347,20 +355,22 @@
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="${pageContext.request.contextPath}/img/user9.jpg" class="user-image" alt="User Image">
+                            <img src="${pageContext.request.contextPath}/img/user9.jpg" class="user-image"
+                                 alt="User Image">
                             <span class="hidden-xs">张三</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="${pageContext.request.contextPath}/img/user9.jpg" class="img-circle" alt="User Image">
+                                <img src="${pageContext.request.contextPath}/img/user9.jpg" class="img-circle"
+                                     alt="User Image">
 
                                 <p>
                                     张三 - 数据管理员
                                     <small>最后登录 11:20AM</small>
                                 </p>
                             </li>
-                    
+
                             <li class="user-footer">
                                 <div class="pull-left">
                                     <a href="#" class="btn btn-default btn-flat">修改密码</a>
@@ -399,7 +409,6 @@
                 <li id="admin-index"><a href=""><i class="fa fa-dashboard"></i> <span>首页</span></a></li>
 
                 <!-- 菜单 -->
-
 
 
                 <li class="treeview">
@@ -498,7 +507,7 @@
 <script src="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
 <script src="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js"></script>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         // 选择框
         $(".select2").select2();
 
@@ -519,7 +528,7 @@
     }
 
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         // 激活导航位置
         setSidebarActive("admin-index");
     });

@@ -44,13 +44,13 @@
     <div class="login-box-body">
         <p class="login-box-msg">登录系统</p>
 
-        <form action="all-admin-index.html" method="get">
+        <form action="${pageContext.request.contextPath}/login.do" method="post">
             <div class="form-group has-feedback">
-                <input type="email" class="form-control" placeholder="Email">
+                <input type="text" class="form-control" name="username" placeholder="用户名">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="密码">
+                <input type="password" name="password" class="form-control" placeholder="密码">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="row">
@@ -66,12 +66,6 @@
                 <!-- /.col -->
             </div>
         </form>
-
-        <div class="social-auth-links text-center">
-            <p>- 或者 -</p>
-            <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-qq"></i> 腾讯QQ用户登录</a>
-            <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-weixin"></i> 微信用户登录</a>
-        </div>
         <!-- /.social-auth-links -->
 
         <a href="#">忘记密码</a><br>

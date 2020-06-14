@@ -26,6 +26,27 @@ public class Orders {
         return id;
     }
 
+    @Override
+    public String toString() {
+        return "Orders{" +
+                "id=" + id +
+                ", orderNum='" + orderNum + '\'' +
+                ", orderTime=" + orderTime +
+                ", orderTimeStr='" + orderTimeStr + '\'' +
+                ", orderStatus=" + orderStatus +
+                ", orderStatusStr='" + orderStatusStr + '\'' +
+                ", peopleCount=" + peopleCount +
+                ", product=" + product +
+                ", travellers=" + travellers +
+                ", member=" + member +
+                ", payType=" + payType +
+                ", payTypeStr='" + payTypeStr + '\'' +
+                ", orderDesc='" + orderDesc + '\'' +
+                ", productId=" + productId +
+                ", memberId=" + memberId +
+                '}';
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -167,26 +188,5 @@ public class Orders {
 
     public void setMemberId(Long memberId) {
         this.memberId = memberId;
-    }
-
-    @Override
-    public String toString() {
-        return "Orders{" +
-                "id=" + id +
-                ", orderNum='" + orderNum + '\'' +
-                ", orderTime=" + orderTime +
-                ", orderTimeStr='" + orderTimeStr + '\'' +
-                ", orderStatus=" + orderStatus +
-                ", orderStatusStr='" + orderStatusStr + '\'' +
-                ", peopleCount=" + peopleCount +
-                ", product=" + product +
-                ", travellers=" + travellers +
-                ", member=" + member +
-                ", payType=" + payType +
-                ", payTypeStr='" + payTypeStr + '\'' +
-                ", orderDesc='" + orderDesc + '\'' +
-                ", productId=" + productId +
-                ", memberId=" + memberId +
-                '}';
     }
 }

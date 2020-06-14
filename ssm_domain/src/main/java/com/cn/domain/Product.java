@@ -13,15 +13,10 @@ public class Product implements Serializable {
     private String cityName;
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     private Date departrueTime;
-    private String departrueTimeStr;
-    private Double productPrice;
-    private String productDesc;
-    private Integer productStatus;
-    private String productStatusStr;
 
     @Override
     public String toString() {
-        return "product{" +
+        return "Product{" +
                 "id='" + id + '\'' +
                 ", productNum='" + productNum + '\'' +
                 ", productName='" + productName + '\'' +
@@ -34,6 +29,12 @@ public class Product implements Serializable {
                 ", productStatusStr='" + productStatusStr + '\'' +
                 '}';
     }
+
+    private String departrueTimeStr;
+    private Double productPrice;
+    private String productDesc;
+    private Integer productStatus;
+    private String productStatusStr;
 
     public String getId() {
         return id;

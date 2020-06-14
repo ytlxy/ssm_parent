@@ -13,21 +13,6 @@ public class Traveller implements Serializable {
     private Integer travlelerType;
     private String travlelerTypeStr;
 
-    @Override
-    public String toString() {
-        return "traveller{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", sex='" + sex + '\'' +
-                ", phoneNum='" + phoneNum + '\'' +
-                ", credentialsType=" + credentialsType +
-                ", credentialsTypeStr='" + credentialsTypeStr + '\'' +
-                ", creaentialsNum='" + creaentialsNum + '\'' +
-                ", travlelerType=" + travlelerType +
-                ", travlelerTypeStr='" + travlelerTypeStr + '\'' +
-                '}';
-    }
-
     public Long getId() {
         return id;
     }
@@ -38,6 +23,21 @@ public class Traveller implements Serializable {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Traveller{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", sex='" + sex + '\'' +
+                ", phoneNum='" + phoneNum + '\'' +
+                ", credentialsType=" + credentialsType +
+                ", credentialsTypeStr='" + credentialsTypeStr + '\'' +
+                ", creaentialsNum='" + creaentialsNum + '\'' +
+                ", travlelerType=" + travlelerType +
+                ", travlelerTypeStr='" + travlelerTypeStr + '\'' +
+                '}';
     }
 
     public void setName(String name) {

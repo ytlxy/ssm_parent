@@ -7,11 +7,10 @@ public class Member implements Serializable {
     private String name;
     private String nickname;
     private String phoneNum;
-    private String email;
 
     @Override
     public String toString() {
-        return "member{" +
+        return "Member{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", nickname='" + nickname + '\'' +
@@ -59,4 +58,6 @@ public class Member implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    private String email;
 }

@@ -8,13 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 
-
-
     <title>数据 - AdminLTE2定制版</title>
     <meta name="description" content="AdminLTE2定制版">
     <meta name="keywords" content="AdminLTE2定制版">
-
-
 
 
     <!-- Tell the browser to be responsive to screen width -->
@@ -50,12 +46,6 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-
-
-
-
-
 
 
     <!-- jQuery 2.2.3 -->
@@ -104,20 +94,24 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/datepicker/datepicker3.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.theme.default.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.theme.default.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/select2/select2.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/colorpicker/bootstrap-colorpicker.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/adminLTE/css/AdminLTE.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/adminLTE/css/skins/_all-skins.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.skinNice.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-slider/slider.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
 </head>
 
 <body class="hold-transition skin-purple sidebar-mini">
@@ -154,64 +148,65 @@
         <div class="tab-pane" id="tab-common">
             <form action="${pageContext.request.contextPath}/product/save.do" method="post">
                 <section class="content">
-            <div class="row data-type">
-                <div class="col-md-2 title">产品编号</div>
-                <div class="col-md-4 data">
-                    <input type="text" class="form-control" name="productNum" placeholder="产品编号" value="">
-                </div>
-
-                <div class="col-md-2 title">产品名称</div>
-                <div class="col-md-4 data">
-                    <input type="text" class="form-control" name="productName" placeholder="产品名称" value="">
-                </div>
-
-                <div class="col-md-2 title">出发城市</div>
-                <div class="col-md-4 data">
-                    <input type="text" class="form-control" name="cityName" placeholder="出发城市">
-                </div>
-
-                <div class="col-md-2 title">出发时间</div>
-                <div class="col-md-4 data">
-                    <div class="input-group date">
-                        <div class="input-group-addon">
-                            <i class="fa fa-calendar"></i>
+                    <div class="row data-type">
+                        <div class="col-md-2 title">产品编号</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" name="productNum" placeholder="产品编号" value="">
                         </div>
-                        <input type="text" class="form-control pull-right" name="departrueTimeStr" id="dateTimePicker">
-                    </div>
-                </div>
 
-                <div class="col-md-2 title">产品价格</div>
-                <div class="col-md-4 data">
-                        <input type="text" class="form-control" name="productPrice">
-                    </div>
-                </div>
+                        <div class="col-md-2 title">产品名称</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" name="productName" placeholder="产品名称" value="">
+                        </div>
 
-                <div class="col-md-2 title">产品描述</div>
-                <div class="col-md-4 data">
-                    <textarea class="form-control" rows="3" placeholder="请输入" name="productDesc"></textarea>
-                </div>
-                <div class="col-md-2 title"></div>
-                <div class="col-md-10 data text-center">
-                    <button type="submit" class="btn bg-maroon">保存</button>
-                    <button type="button" class="btn bg-default" onclick="history.back(-1);">返回</button>
-                </div>
+                        <div class="col-md-2 title">出发城市</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" name="cityName" placeholder="出发城市">
+                        </div>
+
+                        <div class="col-md-2 title">出发时间</div>
+                        <div class="col-md-4 data">
+                            <div class="input-group date">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control pull-right" name="departrueTimeStr"
+                                       id="dateTimePicker">
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 title">产品价格</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" name="productPrice">
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 title">产品描述</div>
+                    <div class="col-md-4 data">
+                        <textarea class="form-control" rows="3" placeholder="请输入" name="productDesc"></textarea>
+                    </div>
+                    <div class="col-md-2 title"></div>
+                    <div class="col-md-10 data text-center">
+                        <button type="submit" class="btn bg-maroon">保存</button>
+                        <button type="button" class="btn bg-default" onclick="history.back(-1);">返回</button>
+                    </div>
                 </section>
             </form>
-            </div>
         </div>
-        <!-- 正文区域 -->
     </div>
-    <!-- @@close -->
-    <!-- 内容区域 /-->
+    <!-- 正文区域 -->
+</div>
+<!-- @@close -->
+<!-- 内容区域 /-->
 
-    <!-- 底部导航 -->
-    <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Version</b> 1.0.8
-        </div>
-        <strong>Copyright &copy; 2014-2017 <a href="http://www.itcast.cn">研究院研发部</a>.</strong> All rights reserved.
-    </footer>
-    <!-- 底部导航 /-->
+<!-- 底部导航 -->
+<footer class="main-footer">
+    <div class="pull-right hidden-xs">
+        <b>Version</b> 1.0.8
+    </div>
+    <strong>Copyright &copy; 2014-2017 <a href="http://www.itcast.cn">研究院研发部</a>.</strong> All rights reserved.
+</footer>
+<!-- 底部导航 /-->
 
 </div>
 
@@ -262,7 +257,7 @@
 <script src="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
 <script src="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js"></script>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         // 选择框
         $(".select2").select2();
 
@@ -283,8 +278,7 @@
     }
 
 
-
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         // 颜色选取器
         $(".my-colorpicker1").colorpicker();
@@ -293,17 +287,13 @@
     });
 
 
-
-
-    $(document).ready(function() {
+    $(document).ready(function () {
         // 选择框
         $(".select2").select2();
     });
 
 
-
-
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         //Date picker
         $('#datepicker').datepicker({
@@ -374,7 +364,7 @@
                 startDate: moment().subtract(29, 'days'),
                 endDate: moment()
             },
-            function(start, end) {
+            function (start, end) {
                 $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
             }
         );
@@ -382,9 +372,7 @@
     });
 
 
-
-
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         /*table tree*/
         $("#collapse-table").treetable({
@@ -394,9 +382,7 @@
     });
 
 
-
-
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         CKEDITOR.replace('editor1');
 
@@ -413,8 +399,7 @@
     });
 
 
-
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         // 激活导航位置
         setSidebarActive("admin-dataform");

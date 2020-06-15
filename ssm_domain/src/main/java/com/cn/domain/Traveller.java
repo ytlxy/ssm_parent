@@ -1,7 +1,9 @@
 package com.cn.domain;
 
-import java.io.Serializable;
+import lombok.ToString;
 
+import java.io.Serializable;
+@ToString
 public class Traveller implements Serializable {
     private Long id;
     private String name;
@@ -23,21 +25,6 @@ public class Traveller implements Serializable {
 
     public String getName() {
         return name;
-    }
-
-    @Override
-    public String toString() {
-        return "Traveller{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", sex='" + sex + '\'' +
-                ", phoneNum='" + phoneNum + '\'' +
-                ", credentialsType=" + credentialsType +
-                ", credentialsTypeStr='" + credentialsTypeStr + '\'' +
-                ", creaentialsNum='" + creaentialsNum + '\'' +
-                ", travlelerType=" + travlelerType +
-                ", travlelerTypeStr='" + travlelerTypeStr + '\'' +
-                '}';
     }
 
     public void setName(String name) {

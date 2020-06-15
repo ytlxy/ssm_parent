@@ -1,11 +1,12 @@
 package com.cn.domain;
 
 import com.cn.utils.DateUtils;
+import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
 import java.util.Date;
-
+@ToString
 public class Product implements Serializable {
     private String id;
     private String productNum;
@@ -13,22 +14,6 @@ public class Product implements Serializable {
     private String cityName;
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     private Date departrueTime;
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id='" + id + '\'' +
-                ", productNum='" + productNum + '\'' +
-                ", productName='" + productName + '\'' +
-                ", cityName='" + cityName + '\'' +
-                ", departrueTime=" + departrueTime +
-                ", departrueTimeStr='" + departrueTimeStr + '\'' +
-                ", productPrice=" + productPrice +
-                ", productDesc='" + productDesc + '\'' +
-                ", productStatus=" + productStatus +
-                ", productStatusStr='" + productStatusStr + '\'' +
-                '}';
-    }
 
     private String departrueTimeStr;
     private Double productPrice;

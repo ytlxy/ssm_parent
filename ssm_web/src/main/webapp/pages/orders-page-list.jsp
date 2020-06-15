@@ -210,8 +210,8 @@
                                 <th class="sorting_asc">ID</th>
                                 <th class="sorting_desc">订单编号</th>
                                 <th class="sorting_desc">产品编号</th>
-                                <th class="sorting_asc sorting_asc_disabled">产品名称</th>
-                                <th class="sorting_desc sorting_desc_disabled">金额</th>
+                                <th class="text-center sorting">产品名称</th>
+                                <th class="text-center sorting">金额</th>
                                 <th class="sorting">下单日期</th>
                                 <th class="text-center sorting">订单状态</th>
                                 <th class="text-center">操作</th>
@@ -229,13 +229,13 @@
                                     <td>${Orders.orderTimeStr}</td>
                                     <td class="text-center">${Orders.orderStatusStr}</td>
                                     <td class="text-center">
-                                        <button type="button" class="btn bg-olive bth-xs"
-                                                onclick="location.href='${pageContext.request.contextPath}/orders/findById.do?id=${Orders.id}'">
-                                            详情
-                                        </button>
-                                        <button type="button" class="btn bg-olive btn-xs"
+                                        <button type="button" class="btn bg-olive"
                                                 onclick="location.href='${pageContext.request.contextPath}/orders/edit.do?id=${Orders.id}'">
                                             编辑
+                                        </button>
+                                        <button type="button" class="btn bg-olive"
+                                                onclick="location.href='${pageContext.request.contextPath}/orders/findById.do?id=${Orders.id}'">
+                                            详情
                                         </button>
 
                                     </td>

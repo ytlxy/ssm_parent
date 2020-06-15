@@ -32,7 +32,7 @@
     <!-- Date Picker -->
     <!-- Daterange picker -->
     <!-- Bootstrap time Picker -->
-    <!--<link rel="stylesheet" href="${pageContext.request.contextPath}/${pageContext.request.contextPath}/${pageContext.request.contextPath}/plugins/timepicker/bootstrap-timepicker.min.css">-->
+    <!--<link rel="stylesheet" href="/plugins/timepicker/bootstrap-timepicker.min.css">-->
     <!-- bootstrap wysihtml5 - text editor -->
     <!--数据表格-->
     <!-- 表格树 -->

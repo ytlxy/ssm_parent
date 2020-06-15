@@ -1,10 +1,11 @@
 package com.cn.domain;
 
 import com.cn.utils.DateUtils;
+import lombok.ToString;
 
 import java.util.Date;
 import java.util.List;
-
+@ToString
 public class Orders {
     private Long id; //主键 id
     private String orderNum; //订单编号 唯一
@@ -24,27 +25,6 @@ public class Orders {
 
     public Long getId() {
         return id;
-    }
-
-    @Override
-    public String toString() {
-        return "Orders{" +
-                "id=" + id +
-                ", orderNum='" + orderNum + '\'' +
-                ", orderTime=" + orderTime +
-                ", orderTimeStr='" + orderTimeStr + '\'' +
-                ", orderStatus=" + orderStatus +
-                ", orderStatusStr='" + orderStatusStr + '\'' +
-                ", peopleCount=" + peopleCount +
-                ", product=" + product +
-                ", travellers=" + travellers +
-                ", member=" + member +
-                ", payType=" + payType +
-                ", payTypeStr='" + payTypeStr + '\'' +
-                ", orderDesc='" + orderDesc + '\'' +
-                ", productId=" + productId +
-                ", memberId=" + memberId +
-                '}';
     }
 
     public void setId(Long id) {

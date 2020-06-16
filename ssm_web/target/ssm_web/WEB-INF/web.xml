@@ -7,7 +7,7 @@
     <!--  配置加载类路径-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath*:applicationContext.xml<!--,classpath*:spring-Security.xml--></param-value>
+        <param-value>classpath*:applicationContext.xml,classpath*:spring-Security.xml</param-value>
     </context-param>
     <!--  配置监听器-->
     <listener>
@@ -44,6 +44,15 @@
         <filter-name>characterEncodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+    <!--    配置权限过滤器-->
+    <filter>
+        <filter-name>SpringSecurityFilterChain</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>SpringSecurityFilterChain</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
         <welcome-file>index.htm</welcome-file>
@@ -52,13 +61,4 @@
         <welcome-file>default.htm</welcome-file>
         <welcome-file>default.jsp</welcome-file>
     </welcome-file-list>
-    <!--    配置权限过滤器-->
-    <!--    <filter>-->
-    <!--        <filter-name>SpringSecurityFilterChain</filter-name>-->
-    <!--        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>-->
-    <!--    </filter>-->
-    <!--    <filter-mapping>-->
-    <!--        <filter-name>SpringSecurityFilterChain</filter-name>-->
-    <!--        <url-pattern>/*</url-pattern>-->
-    <!--    </filter-mapping>-->
 </web-app>

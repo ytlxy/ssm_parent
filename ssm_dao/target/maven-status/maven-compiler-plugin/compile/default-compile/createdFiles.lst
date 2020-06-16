@@ -1,4 +1,7 @@
-com\cn\dao\ITravellerDao.class
-com\cn\dao\IProductDao.class
+com\cn\dao\IPermissionDao.class
+com\cn\dao\IUserDao.class
 com\cn\dao\IOrderDao.class
 com\cn\dao\IMemberDao.class
+com\cn\dao\ITravellerDao.class
+com\cn\dao\IProductDao.class
+com\cn\dao\IRoleDao.class

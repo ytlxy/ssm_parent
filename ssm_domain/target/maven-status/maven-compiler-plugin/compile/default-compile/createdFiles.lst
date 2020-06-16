@@ -1,4 +1,7 @@
+com\cn\domain\UserInfo.class
 com\cn\domain\Member.class
+com\cn\domain\Role.class
 com\cn\domain\Product.class
 com\cn\domain\Orders.class
+com\cn\domain\Permission.class
 com\cn\domain\Traveller.class

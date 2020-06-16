@@ -23,7 +23,7 @@
                 authentication-failure-url="/failer.jsp"
                 authentication-success-forward-url="/pages/main.jsp"/>
         <security:csrf disabled="true"/>
-        <security:logout invalidate-session="true" logout-url="/login.do" logout-success-url="/login.jsp"/>
+        <security:logout invalidate-session="true" logout-url="/logout.do" logout-success-url="/login.jsp"/>
     </security:http>
     <security:authentication-manager>
         <security:authentication-provider user-service-ref="userService">

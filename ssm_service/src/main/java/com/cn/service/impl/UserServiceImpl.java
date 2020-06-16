@@ -29,7 +29,7 @@ public class UserServiceImpl implements IUserService {
             e.printStackTrace();
         }
         User user=new User(userInfo.getUsername(),userInfo.getPassword(),getAuthority(userInfo.getRoles()));
-        User user1=new User(userInfo.getUsername(),"{noop}"+userInfo.getPassword(),userInfo.getStatus()==1 ? true :false,true,true,true,getAuthority(userInfo.getRoles()));
+        User user1=new User(userInfo.getUsername(),"{noop}"+userInfo.getPassword(),userInfo.getStatus()==1 ? true : false,true,true,true,getAuthority(userInfo.getRoles()));
         return user1;
     }
     public List<SimpleGrantedAuthority> getAuthority(List<Role> roles){

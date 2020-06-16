@@ -38,7 +38,6 @@ public class ProductServiceImpl implements IProductService {
 
     @Override
     public void update(Product product) throws Exception {
-        System.out.println(product);
         iProductDao.update(product);
     }
 }

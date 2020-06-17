@@ -39,4 +39,9 @@ public class UserServiceImpl implements IUserService {
         }
         return simpleGrantedAuthorities;
     }
+
+    @Override
+    public List<UserInfo> findAll(int page,int pageSize) throws Exception {
+        return userDao.findAll();
+    }
 }

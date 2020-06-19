@@ -9,6 +9,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,6 +21,8 @@ import java.util.List;
 public class UserServiceImpl implements IUserService {
     @Autowired
     private IUserDao userDao;
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserInfo userInfo=null;
@@ -29,7 +32,7 @@ public class UserServiceImpl implements IUserService {
             e.printStackTrace();
         }
         User user=new User(userInfo.getUsername(),userInfo.getPassword(),getAuthority(userInfo.getRoles()));
-        User user1=new User(userInfo.getUsername(),"{noop}"+userInfo.getPassword(),userInfo.getStatus()==1 ? true : false,true,true,true,getAuthority(userInfo.getRoles()));
+        User user1=new User(userInfo.getUsername(),userInfo.getPassword(),userInfo.getStatus()==1 ? true : false,true,true,true,getAuthority(userInfo.getRoles()));
         return user1;
     }
     public List<SimpleGrantedAuthority> getAuthority(List<Role> roles){
@@ -43,5 +46,26 @@ public class UserServiceImpl implements IUserService {
     @Override
     public List<UserInfo> findAll(int page,int pageSize) throws Exception {
         return userDao.findAll();
+    }
+
+    @Override
+    public void save(UserInfo userInfo) throws Exception {
+        userInfo.setPassword(bCryptPasswordEncoder.encode(userInfo.getPassword()));
+        userDao.save(userInfo);
+    }
+
+    @Override
+    public void update(UserInfo userInfo) {
+        userDao.update(userInfo);
+    }
+
+    @Override
+    public void delete(Integer id) {
+        userDao.delete(id);
+    }
+
+    @Override
+    public UserInfo findByUserId(String username) throws Exception {
+        return userDao.findByUserId(username);
     }
 }

@@ -173,7 +173,7 @@
                             <div class="form-group form-inline">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-default" title="新建"><i class="fa fa-file-o"
-                                                                                                onclick="location.href='${pageContext.request.contextPath}/pages/orders-add.jsp'"></i>
+                                                                                                onclick="location.href='${pageContext.request.contextPath}/pages/users-add.jsp'"></i>
                                         新建
                                     </button>
                                     <button type="button" class="btn btn-default" title="删除"><i
@@ -186,7 +186,7 @@
                                         屏蔽
                                     </button>
                                     <button type="button" class="btn btn-default" title="刷新"><i class="fa fa-refresh"
-                                                                                                onclick="location.href='${pageContext.request.contextPath}/orders/findAll.do?page=1&pageSize=${pageInfo.pageSize}'"></i>
+                                                                                                onclick="location.href='${pageContext.request.contextPath}/users/findAll.do?page=1&pageSize=${Userinfo.pageSize}'"></i>
                                         刷新
                                     </button>
                                 </div>
@@ -211,9 +211,8 @@
                                 <th class="sorting_asc">ID</th>
                                 <th class="sorting_desc">邮箱</th>
                                 <th class="sorting_desc">用户名</th>
-                                <th class="text-center sorting">密码</th>
                                 <th class="text-center sorting">电话</th>
-                                <th class="text-center sorting">订单状态</th>
+                                <th class="text-center sorting">用户状态</th>
                                 <th class="text-center">操作</th>
                             </tr>
                             </thead>
@@ -225,10 +224,13 @@
                                     <td>${UserInfo.id}</td>
                                     <td>${UserInfo.email}</td>
                                     <td>${UserInfo.username}</td>
-                                    <td>${UserInfo.password}</td>
                                     <td>${UserInfo.phoneNum}</td>
                                     <td class="text-center">${UserInfo.statusStr}</td>
                                     <td class="text-center">
+                                        <button type="button" class="btn bg-olive"
+                                                onclick="location.href='${pageContext.request.contextPath}/users/delete.do?id=${UserInfo.id}'">
+                                            删除
+                                        </button>
                                         <button type="button" class="btn bg-olive"
                                                 onclick="location.href='${pageContext.request.contextPath}/orders/edit.do?id=${UserInfo.id}'">
                                             编辑
@@ -256,33 +258,7 @@
                         <!--数据列表/-->
 
                         <!--工具栏-->
-                        <div class="pull-left">
-                            <div class="form-group form-inline">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default" title="新建"><i
-                                            class="fa fa-file-o"></i> 新建
-                                    </button>
-                                    <button type="button" class="btn btn-default" title="删除"><i
-                                            class="fa fa-trash-o"></i> 删除
-                                    </button>
-                                    <button type="button" class="btn btn-default" title="开启"><i class="fa fa-check"></i>
-                                        开启
-                                    </button>
-                                    <button type="button" class="btn btn-default" title="屏蔽"><i class="fa fa-ban"></i>
-                                        屏蔽
-                                    </button>
-                                    <button type="button" class="btn btn-default" title="刷新"><i
-                                            class="fa fa-refresh"></i> 刷新
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-tools pull-right">
-                            <div class="has-feedback">
-                                <input type="text" class="form-control input-sm" placeholder="搜索">
-                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                            </div>
-                        </div>
+
                         <!--工具栏/-->
 
                     </div>

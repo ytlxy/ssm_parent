@@ -54,7 +54,7 @@ public class ProductController {
     }
 
     @RequestMapping("/update.do")
-    public String edit(Product product) throws Exception {
+    public String update(Product product) throws Exception {
 //        System.out.println(product);
         productService.update(product);
         return "redirect:findAll.do";

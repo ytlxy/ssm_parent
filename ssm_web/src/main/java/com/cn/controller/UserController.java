@@ -27,4 +27,27 @@ public class UserController {
         mv.setViewName("users-list");
         return mv;
     }
+    @RequestMapping("/edit.do")
+    public ModelAndView edit(String username) throws Exception {
+        ModelAndView mv=new ModelAndView();
+        UserInfo user=userService.findByUserId(username);
+        mv.addObject("user",user);
+        mv.setViewName("users-add");
+        return mv;
+    }
+    @RequestMapping("/delete.do")
+    public String delete(Integer id){
+        userService.delete(id);
+        return "redirect:findAll.do";
+    }
+    @RequestMapping("/update.do")
+    public String update(UserInfo userInfo){
+        userService.update(userInfo);
+        return "redirect:findAll.do";
+    }
+    @RequestMapping("/save.do")
+    public String save(UserInfo userInfo) throws Exception {
+        userService.save(userInfo);
+        return "redirect:findAll.do";
+    }
 }

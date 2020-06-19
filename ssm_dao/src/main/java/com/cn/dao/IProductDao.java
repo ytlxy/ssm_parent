@@ -19,9 +19,9 @@ public interface IProductDao {
     public List<Product> findAll() throws Exception;
 
     @Insert("insert into " +
-            "product(productNum,productName,cityName,departureTime,productPrice,productDesc,productStatus)"
-            + " values(#{productNum},#{productName},#{cityName},#{departureTime},#{productPrice},"
-            + "#{productDesc},#{productStatus})")
+            "product(productNum,productName,cityName,departrueTime,productPrice,productDesc,productStatus)"
+            + " values(#{productNum},#{productName},#{cityName},#{departrueTime},#{productPrice},"
+            + "#{productDesc},1)")
     public void save(Product product) throws Exception;
 
     /**
@@ -46,6 +46,6 @@ public interface IProductDao {
      *
      * @param product 需要更新的对象
      */
-    @Update("update product set productNum=#{productNum},productName=#{productName},cityName=#{cityName},departureTim e=#{departureTime},productPrice=#{productPrice},productDesc=#{productDesc},productSta tus=#{productStatus} where id=#{id}")
+    @Update("update product set productNum=#{productNum},productName=#{productName},cityName=#{cityName},departureTim e=#{departureTime},productPrice=#{productPrice},productDesc=#{productDesc},productStatus=#{productStatus} where id=#{id}")
     public void update(Product product);
 }

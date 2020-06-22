@@ -232,11 +232,11 @@
                                             删除
                                         </button>
                                         <button type="button" class="btn bg-olive"
-                                                onclick="location.href='${pageContext.request.contextPath}/orders/edit.do?id=${UserInfo.id}'">
+                                                onclick="location.href='${pageContext.request.contextPath}/users/edit.do?id=${UserInfo.id}'">
                                             编辑
                                         </button>
                                         <button type="button" class="btn bg-olive"
-                                                onclick="location.href='${pageContext.request.contextPath}/orders/findById.do?id=${UserInfo.id}'">
+                                                onclick="location.href='${pageContext.request.contextPath}/users/findById.do?id=${UserInfo.id}'">
                                             详情
                                         </button>
 

@@ -50,4 +50,12 @@ public class UserController {
         userService.save(userInfo);
         return "redirect:findAll.do";
     }
+    @RequestMapping("/findById.do")
+    public ModelAndView findById(@RequestParam(name = "id",required = true) Integer id) throws Exception {
+        ModelAndView mv=new ModelAndView();
+        UserInfo userInfo=userService.findById(id);
+        mv.addObject("user",userInfo);
+        mv.setViewName("user_show");
+        return mv;
+    }
 }

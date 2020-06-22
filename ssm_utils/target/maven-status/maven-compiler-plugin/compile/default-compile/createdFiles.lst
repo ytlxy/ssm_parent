@@ -1,1 +1,2 @@
 com\cn\utils\DateUtils.class
+com\cn\utils\BCryptPasswordEncoderUtils.class

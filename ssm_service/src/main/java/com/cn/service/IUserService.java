@@ -15,4 +15,6 @@ public interface IUserService extends UserDetailsService {
     public void delete(Integer id);
 
     public UserInfo findByUserId(String username) throws Exception;
+
+    public UserInfo findById(Integer id) throws Exception;
 }

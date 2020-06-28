@@ -1,5 +1,6 @@
 package com.cn.service;
 
+import com.cn.domain.Role;
 import com.cn.domain.UserInfo;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
@@ -17,4 +18,8 @@ public interface IUserService extends UserDetailsService {
     public UserInfo findByUserId(String username) throws Exception;
 
     public UserInfo findById(Integer id) throws Exception;
+
+    public List<Role> findOtherRoles(Integer id) throws Exception;
+
+    public void addRoleToUser(Long userId,Long ... roleIds) throws Exception;
 }

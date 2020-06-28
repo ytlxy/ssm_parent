@@ -236,6 +236,10 @@
                                             编辑
                                         </button>
                                         <button type="button" class="btn bg-olive"
+                                                onclick="location.href='${pageContext.request.contextPath}/users/findUserByIdAndAllRole.do?id=${UserInfo.id}'">
+                                            添加角色
+                                        </button>
+                                        <button type="button" class="btn bg-olive"
                                                 onclick="location.href='${pageContext.request.contextPath}/users/findById.do?id=${UserInfo.id}'">
                                             详情
                                         </button>

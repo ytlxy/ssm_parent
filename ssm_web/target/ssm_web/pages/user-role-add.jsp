@@ -32,7 +32,6 @@
     <!-- Date Picker -->
     <!-- Daterange picker -->
     <!-- Bootstrap time Picker -->
-    <!--<link rel="stylesheet" href="${pageContext.request.contextPath}/${pageContext.request.contextPath}/${pageContext.request.contextPath}/plugins/timepicker/bootstrap-timepicker.min.css">-->
     <!-- bootstrap wysihtml5 - text editor -->
     <!--数据表格-->
     <!-- 表格树 -->
@@ -153,178 +152,43 @@
             </ol>
         </section>
         <!-- 内容头部 /-->
+        <form action="${pageContext.request.contextPath}/users/addRoelToUser.do" method="post">
+            <!-- 正文区域 -->
+            <section class="content">
+<input type="hidden" name="id" value="${user.id}">
+                <!--工具栏/-->
 
-        <!-- 正文区域 -->
-        <section class="content">
-
-            <!-- .box-body -->
-            <div class="box box-primary">
-                <div class="box-header with-border">
-                    <h3 class="box-title">列表</h3>
-                </div>
-
-                <div class="box-body">
-
-                    <!-- 数据表格 -->
-                    <div class="table-box">
-
-                        <!--工具栏-->
-                        <div class="pull-left">
-                            <div class="form-group form-inline">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default" title="新建"><i class="fa fa-file-o"
-                                                                                                onclick="location.href='${pageContext.request.contextPath}/pages/users-add.jsp'"></i>
-                                        新建
-                                    </button>
-                                    <button type="button" class="btn btn-default" title="删除"><i
-                                            class="fa fa-trash-o"></i> 删除
-                                    </button>
-                                    <button type="button" class="btn btn-default" title="开启"><i class="fa fa-check"></i>
-                                        开启
-                                    </button>
-                                    <button type="button" class="btn btn-default" title="屏蔽"><i class="fa fa-ban"></i>
-                                        屏蔽
-                                    </button>
-                                    <button type="button" class="btn btn-default" title="刷新"><i class="fa fa-refresh"
-                                                                                                onclick="location.href='${pageContext.request.contextPath}/users/findAll.do?page=1&pageSize=${Userinfo.pageSize}'"></i>
-                                        刷新
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-tools pull-right">
-                            <div class="has-feedback">
-                                <input type="text" class="form-control input-sm" placeholder="搜索">
-                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                            </div>
-                        </div>
-                        <!--工具栏/-->
-
-                        <!--数据列表-->
-                        <table id="dataList" class="table table-bordered table-striped table-hover dataTable">
-                            <thead>
-                            <tr>
-                                <th class="" style="padding-right:0px;">
-                                    <input id="selall" type="checkbox" class="icheckbox_square-blue">
-                                </th>
-                                <th class="sorting_asc">列表ID</th>
-                                <th class="sorting_asc">ID</th>
-                                <th class="sorting_desc">邮箱</th>
-                                <th class="sorting_desc">用户名</th>
-                                <th class="text-center sorting">电话</th>
-                                <th class="text-center sorting">用户状态</th>
-                                <th class="text-center">操作</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <c:forEach items="${Userinfo.list}" var="UserInfo" varStatus="index">
-                                <tr>
-                                    <td><input name="ids" type="checkbox"></td>
-                                    <td>${index.index+1}</td>
-                                    <td>${UserInfo.id}</td>
-                                    <td>${UserInfo.email}</td>
-                                    <td>${UserInfo.username}</td>
-                                    <td>${UserInfo.phoneNum}</td>
-                                    <td class="text-center">${UserInfo.statusStr}</td>
-                                    <td class="text-center">
-                                        <button type="button" class="btn bg-olive"
-                                                onclick="location.href='${pageContext.request.contextPath}/users/delete.do?id=${UserInfo.id}'">
-                                            删除
-                                        </button>
-                                        <button type="button" class="btn bg-olive"
-                                                onclick="location.href='${pageContext.request.contextPath}/users/edit.do?id=${UserInfo.id}'">
-                                            编辑
-                                        </button>
-                                        <button type="button" class="btn bg-olive"
-                                                onclick="location.href='${pageContext.request.contextPath}/users/findUserByIdAndAllRole.do?id=${UserInfo.id}'">
-                                            添加角色
-                                        </button>
-                                        <button type="button" class="btn bg-olive"
-                                                onclick="location.href='${pageContext.request.contextPath}/users/findById.do?id=${UserInfo.id}'">
-                                            详情
-                                        </button>
-
-                                    </td>
-                                </tr>
-                            </c:forEach>
-                            </tbody>
-                            <!--
-                        <tfoot>
+                <!--数据列表-->
+                <table id="dataList" class="table table-bordered table-striped table-hover dataTable">
+                    <thead>
+                    <tr>
+                        <th class="" style="padding-right:0px;">
+                            <input id="selall" type="checkbox" class="icheckbox_square-blue">
+                        </th>
+                        <th class="sorting_asc">ID</th>
+                        <th class="sorting_asc">用户名称</th>
+                        <th class="sorting_desc">用户描述</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <c:forEach items="${roleList}" var="role">
                         <tr>
-                        <th>Rendering engine</th>
-                        <th>Browser</th>
-                        <th>Platform(s)</th>
-                        <th>Engine version</th>
-                        <th>CSS grade</th>
+                            <td><input name="ids" type="checkbox" value="${role.id}"></td>
+                            <td>${role.id}</td>
+                            <td>${role.roleName}</td>
+                            <td>${role.roleDesc}</td>
                         </tr>
-                        </tfoot>-->
-                        </table>
-                        <!--数据列表/-->
-
-                        <!--工具栏-->
-
-                        <!--工具栏/-->
-
-                    </div>
-                    <!-- 数据表格 /-->
-
-
-                </div>
-                <!-- /.box-body -->
-
-                <!-- .box-footer-->
-                <div class="box-footer">
-                    <div class="pull-left">
-                        <div class="form-group form-inline">
-                            总共${Userinfo.pages}页，共${Userinfo.total} 条数据。 每页
-                            <select class="form-control" id="changPageSize" onchange="changPageSize()">
-                                <c:forEach begin="5" end="100" var="s" step="5">
-                                    <c:choose>
-                                        <c:when test="${Userinfo.pageSize == s}">
-                                            <option selected>${s}</option>
-                                        </c:when>
-                                        <c:otherwise>
-                                            <option>${s}</option>
-                                        </c:otherwise>
-                                    </c:choose>
-                                </c:forEach>
-                            </select> 条
-                        </div>
-                    </div>
-
-                    <div class="box-tools pull-right">
-                        <ul class="pagination">
-                            <li>
-                                <a href="${pageContext.request.contextPath}/users/findAll.do?page=1&pageSize=${Userinfo.pageSize}"
-                                   aria-label="Previous">首页</a>
-                            </li>
-                            <li>
-                                <a href="${pageContext.request.contextPath}/users/findAll.do?page=${Userinfo.pageNum-1}&pageSize=${Userinfo.pageSize}">上一页</a>
-                            </li>
-                            <c:forEach begin="1" end="${Userinfo.pages}" var="pageNum">
-                                <li>
-                                    <a href="${pageContext.request.contextPath}/users/findAll.do?page=${pageNum}&pageSize=${Userinfo.pageSize}">${pageNum}</a>
-                                </li>
-                            </c:forEach>
-                            <li>
-                                <a href="${pageContext.request.contextPath}/users/findAll.do?page=${Userinfo.pageNum+1}&pageSize=${Userinfo.pageSize}">下一页</a>
-                            </li>
-                            <li>
-                                <a href="${pageContext.request.contextPath}/users/findAll.do?page=${Userinfo.pages}&pageSize=${Userinfo.pageSize}"
-                                   aria-label="Next">尾页</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-                <!-- /.box-footer-->
-
-
+                    </c:forEach>
+                    </tbody>
+                </table>
+            </section>
+            <div class="col-md-2 title"></div>
+            <div class="col-md-10 data text-center">
+                <button type="submit" class="btn bg-maroon">保存</button>
+                <button type="button" class="btn bg-default" onclick="history.back(-1);">返回</button>
             </div>
-
-        </section>
-        <!-- 正文区域 /-->
-
+            <!-- 正文区域 /-->
+        </form>
     </div>
     <!-- @@close -->
     <!-- 内容区域 /-->

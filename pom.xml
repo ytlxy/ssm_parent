@@ -36,7 +36,7 @@
         <mybatis-spring.version>2.0.4</mybatis-spring.version>
         <c3p0.version>0.9.5.5</c3p0.version>
         <pagehelper.version>5.1.11</pagehelper.version>
-        <mysql-connector-java.version>5.1.47</mysql-connector-java.version>
+        <mysql-connector-java.version>8.0.16</mysql-connector-java.version>
         <jsr250-api.version>1.0</jsr250-api.version>
         <lombok.version>1.18.12</lombok.version>
     </properties>

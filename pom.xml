@@ -26,7 +26,7 @@
         <resources.dir>src/main/resources</resources.dir>
         <spring.version>5.2.2.RELEASE</spring.version>
         <aspectjweaver.version>1.9.5</aspectjweaver.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
         <jstl.version>1.2</jstl.version>
         <log4j.version>1.2.17</log4j.version>

@@ -24,7 +24,7 @@
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
         <profiles.dir>src/main/profiles</profiles.dir>
         <resources.dir>src/main/resources</resources.dir>
-        <spring.version>5.2.2.RELEASE</spring.version>
+        <spring.version>5.5.7</spring.version>
         <aspectjweaver.version>1.9.5</aspectjweaver.version>
         <junit.version>4.12</junit.version>
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
